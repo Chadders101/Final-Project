@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "MELD",
+    "version": "0.2",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "http://127.0.0.1:5000/"
+    ],
+    "host_permissions": [
+      "https://europe-west2-lateral-berm-410914.cloudfunctions.net/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.gmail.com/*",
+          "*://*.outlook.com/*",
+          "*://*.yahoo.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "MEDUSA.png"
+    }
+  }
+  
